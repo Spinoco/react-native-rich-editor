@@ -500,6 +500,7 @@ function createHTML(options = {}) {
                 const images = document.getElementsByTagName('img');
                 for (let i = 0; i < images.length; i++) {
                     images[i].onload = Actions.UPDATE_HEIGHT;
+                    images[i].onerror = Actions.UPDATE_HEIGHT;
                 }
             },
 
